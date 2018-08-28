@@ -116,14 +116,14 @@ function clickTile(event){
     if (setFlag){
         //Remove flag and increment remaining flags
         if (grid[y][x].isFlag){
-            $(this).css("background-image", "url(../images/defaultTile.png");
+            $(this).css("background-image", "url(images/defaultTile.png");
             grid[y][x].isFlag = false;
             $("#remFlags").text(parseInt($("#remFlags").text()) + 1);
         }
         else{
             //Add a flag and decrement remaining flags
             if ($("#remFlags").text() > 0) {
-                $(this).css("background-image", "url(../images/flag.png");
+                $(this).css("background-image", "url(images/flag.png");
                 grid[y][x].isFlag = true;
                 $("#remFlags").text($("#remFlags").text() - 1);
             }
@@ -202,7 +202,7 @@ function analyzeNeighbors(i, j){
 function revealTile(x, y){
     if (!grid[y][x].isRevealed){
         if (grid[y][x].value == 0){
-            $("#" + y + "x" + x).css("background-image", "url(../images/tileZero.png)");
+            $("#" + y + "x" + x).css("background-image", "url(images/tileZero.png)");
             grid[y][x].isRevealed = true;
             var neighbors = grid[y][x].neighbors;
             for (var i = 0; i < neighbors.length; ++i){
@@ -211,39 +211,39 @@ function revealTile(x, y){
         }
         else if (grid[y][x].value == 1){
             grid[y][x].isRevealed = true;
-            $("#" + y + "x" + x).css("background-image", "url(../images/tileOne.png)");
+            $("#" + y + "x" + x).css("background-image", "url(images/tileOne.png)");
         }
         else if (grid[y][x].value == 2){
             grid[y][x].isRevealed = true;
-            $("#" + y + "x" + x).css("background-image", "url(../images/tileTwo.png)");
+            $("#" + y + "x" + x).css("background-image", "url(images/tileTwo.png)");
         }
         else if (grid[y][x].value == 3){
             grid[y][x].isRevealed = true;
-            $("#" + y + "x" + x).css("background-image", "url(../images/tileThree.png)");
+            $("#" + y + "x" + x).css("background-image", "url(images/tileThree.png)");
         }
         else if (grid[y][x].value == 4){
             grid[y][x].isRevealed = true;
-            $("#" + y + "x" + x).css("background-image", "url(../images/tileFour.png)");
+            $("#" + y + "x" + x).css("background-image", "url(images/tileFour.png)");
         }
         else if (grid[y][x].value == 5){
             grid[y][x].isRevealed = true;
-            $("#" + y + "x" + x).css("background-image", "url(../images/tileFive.png)");
+            $("#" + y + "x" + x).css("background-image", "url(images/tileFive.png)");
         }
         else if (grid[y][x].value == 6){
             grid[y][x].isRevealed = true;
-            $("#" + y + "x" + x).css("background-image", "url(../images/tileSix.png)");
+            $("#" + y + "x" + x).css("background-image", "url(images/tileSix.png)");
         }
         else if (grid[y][x].value == 7){
             grid[y][x].isRevealed = true;
-            $("#" + y + "x" + x).css("background-image", "url(../images/tileSeven.png)");
+            $("#" + y + "x" + x).css("background-image", "url(images/tileSeven.png)");
         }
         else if (grid[y][x].value == 8){
             grid[y][x].isRevealed = true;
-            $("#" + y + "x" + x).css("background-image", "url(../images/tileEight.png)");
+            $("#" + y + "x" + x).css("background-image", "url(images/tileEight.png)");
         }
         else if (grid[y][x].value == 9){
             grid[y][x].isRevealed = true;
-            $("#" + y + "x" + x).css("background-image", "url(../images/bomb.png)");
+            $("#" + y + "x" + x).css("background-image", "url(images/bomb.png)");
         }
     }
 }
